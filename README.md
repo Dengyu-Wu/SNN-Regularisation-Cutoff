@@ -18,8 +18,3 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 <!-- Citation -->
 ## Citation
 For more details, please refer to our [pre-print](https://github.com/Dengyu-Wu/spkeras) 
-```
-
-
-
-We train and evaluate SNN based on SpKeras[], 
