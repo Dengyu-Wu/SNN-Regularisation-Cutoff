@@ -8,7 +8,7 @@
 # SNN-Regularisation-Cuoff
 <img src="./doc/SNN-Regularisation-Cuoff.png">
 
-Our experiment is based on [SpKeras](https://github.com/Dengyu-Wu/spkeras) with additional layer, SpikingLayer for temporal training. 
+Our experiment is based on [SpKeras](https://github.com/Dengyu-Wu/spkeras) with additional SpikingLayer for temporal training. 
 
 <!-- LICENSE -->
 ## License
