@@ -6,7 +6,9 @@
 
 <!-- ABOUT THE PROJECT -->
 # SNN-Regularisation-Cuoff
-<img src="./doc/SNN-Regularisation-Cuoff.png">
+<p align="center">
+<img src="./doc/SNN-Regularisation-Cuoff.png" width="800">
+</p>
 
 Our experiment is based on [SpKeras](https://github.com/Dengyu-Wu/spkeras) with additional SpikingLayer for temporal training. 
 
