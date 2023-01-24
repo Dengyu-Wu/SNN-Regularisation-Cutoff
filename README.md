@@ -19,4 +19,4 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 
 <!-- Citation -->
 ## Citation
-For more details, please refer to our [preprint](https://github.com/Dengyu-Wu/spkeras) 
+For more details, please refer to our [preprint](https://arxiv.org/abs/2301.09522) 
