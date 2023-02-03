@@ -5,7 +5,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-# SNN-Regularisation-Cuoff
+# SNN-Regularisation-Cutoff
 <p align="center">
 <img src="./doc/SNN-Regularisation-Cuoff.png" width="800">
 </p>
