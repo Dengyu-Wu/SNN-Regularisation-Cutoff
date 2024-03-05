@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python  ./snncutoff/scripts/evaluation.py \
+python  ./scripts/evaluation.py \
         base.epochs=300 \
         base.gpu_id=\'1\' \
         base.seed=1200 \
@@ -10,18 +10,15 @@ python  ./snncutoff/scripts/evaluation.py \
         base.dataset_path='datasets' \
         \
         snn-train.method=\'ann\' \
-        snn-train.ann_constrs=\'qcfsconstrs\' \
+        snn-train.ann_layers=\'qcfs\' \
+        snn-train.snn_layers=\'baselayer\' \
         snn-train.regularizer=\'none\' \
-        snn-train.multistep=False \
-        snn-train.multistep_ann=True \
         snn-train.add_time_dim=True \
-        snn-train.L=4 \
+        snn-train.multistep_ann=False \
         snn-train.T=4 \
-        snn-train.alpha=0.00 \
+        snn-train.L=4 \
+        snn-train.alpha=0.0 \
         \
-        snn-test.epsilon=0.0 \
+        snn-test.epsilon=0.01 \
         snn-test.reset_mode='soft' \
-        snn-test.model_path=\'/LOCAL2/dengyu/MySNN/easycutoff/outputs-qcfs/cifar10-resnet18-ann1T4L-TETFalse-TEBNFalse-qcfsconstrs-rcs-alpha0.0-seed200-epochs300/cifar10.pth\' \
-        \
-        hydra.output_subdir=null \
-        hydra.run.dir=. 
+        snn-test.model_path=\'outputs/cifar10-resnet18-ann1T4L-TETFalse-TEBNFalse-qcfs-none-alpha0.001-seed200-epochs300/cifar10.pth\'

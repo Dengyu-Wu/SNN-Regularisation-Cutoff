@@ -13,9 +13,8 @@ python  ./scripts/training.py \
         snn-train.method=\'ann\' \
         snn-train.ann_layers=\'qcfs\' \
         snn-train.regularizer=\'none\' \
-        snn-train.TET=False \
         snn-train.multistep_ann=False \
         snn-train.add_time_dim=True \
         snn-train.T=1 \
         snn-train.L=4 \
-        snn-train.alpha=0.01
+        snn-train.alpha=0.001
