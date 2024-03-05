@@ -1,0 +1,48 @@
+base:
+  epochs: 100
+  batch_size: 128
+  start_epoch: 0
+  weight_decay: 0.0005
+  lr: 0.1
+  print_freq: 1000
+  seed: 3407
+  nprocs: 0
+  local_rank: 0
+  workers: 8
+  log: none
+  project: none
+  port: '11332'
+  gpu_id: '1'
+  data: cifar10-dvs
+  model: vggann
+  dataset_path: /LOCAL/dengyu/dvs_dataset/dvs-cifar10
+  checkpoint_save: false
+  checkpoint_path: none
+snn-train:
+  method: snn
+  ann_layers: none
+  snn_layers: baselayer
+  regularizer: rcs
+  TEBN: false
+  T: 10
+  L: 4
+  evaluate: 'False'
+  loss: mean
+  TET: true
+  multistep_ann: 'True'
+  multistep: true
+  add_time_dim: 'False'
+  means: 1.0
+  lamb: 0.001
+  alpha: 0.0
+  rcs_n: 0.3
+snn-test:
+  epsilon: 0.0
+  decay_factor: 0.5
+  cutoff_name: topk
+  reset_mode: soft
+  model_path: cifar10.pth
+logging:
+  tensorboard_logging: 'False'
+  comet_logging: 'False'
+  run_dir: none

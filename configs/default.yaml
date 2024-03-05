@@ -1,0 +1,62 @@
+base:
+  epochs: 100
+  batch_size: 128
+  start_epoch: 0
+  weight_decay: 5e-4
+  lr: 0.1
+  print_freq: 1000
+  seed: 2000
+  nprocs: 0
+  local_rank: 0
+  workers: 8
+  log: none
+  project: none
+  port: '12345'
+  gpu_id: '0'
+  data: cifar10-dvs
+  model: vggann
+  dataset_path: datasets
+  checkpoint_save: False
+  checkpoint_path: none
+  
+snn-train:
+  method: 'ann'
+  ann_layers: 'none'
+  snn_layers: 'baselayer'
+  regularizer: 'none'
+  TEBN: False
+  T: 4
+  L: 4
+  evaluate: 'False'
+  loss: 'mean'
+  TET: 'False'
+  multistep_ann: 'True'
+  multistep: 'True'
+  add_time_dim: 'False'
+  means: 1.0
+  lamb: 1e-3
+  # lamb: 0.0
+  alpha: 0.002
+  rcs_n: 0.3
+  
+snn-test:
+  epsilon: 0.0
+  decay_factor: 0.5
+  cutoff_name: 'topk'
+  reset_mode: 'soft'
+  model_path: cifar10.pth
+
+###Logging Configuration
+logging:
+  tensorboard_logging: 'False'
+  comet_logging: 'False'
+  run_dir: none
+
+###  Disable Hydra Logging ###
+defaults:
+  - override hydra/hydra_logging: none
+  - override hydra/job_logging: none
+
+hydra:  
+  run:  
+    dir: outputs/${base.data}-${base.model}-${snn-train.method}${snn-train.T}T${snn-train.L}L-TET${snn-train.TET}-TEBN${snn-train.TEBN}-${snn-train.ann_layers}-${snn-train.regularizer}-alpha${snn-train.alpha}-seed${base.seed}-epochs${base.epochs}/
