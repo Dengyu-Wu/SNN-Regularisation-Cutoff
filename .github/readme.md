@@ -1,5 +1,8 @@
 # SNN-Regularisation-Cutoff
 
+The implmentation is also available in [SNNCutoff](https://github.com/Dengyu-Wu/snncutoff).
+
+
 <p align="center">
 <img src="../docs/_static/snn-regularisation-cutoff.png" width="800">
 </p>
